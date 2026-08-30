@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MindScore — Understand Your Mind. Measure Your Wellbeing.</title>
+<meta name="description" content="MindScore uses machine learning to transform everyday lifestyle and wellbeing indicators into an easy-to-understand mental health score." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<header class="nav" id="siteNav">
+  <div class="nav__inner">
+    <a href="#home" class="nav__logo" data-nav-link="home">
+      <span class="nav__logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="4.5" class="mark-core"/><circle cx="12" cy="12" r="10" class="mark-ring"/></svg>
+      </span>
+      MindScore
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#home" data-nav-link="home">Home</a>
+      <a href="#assessment" data-nav-link="assessment">Assessment</a>
+      <a href="#how-it-works" data-nav-link="how-it-works">How It Works</a>
+      <a href="#about" data-nav-link="about">About</a>
+    </nav>
+
+    <button class="btn btn--primary btn--sm nav__cta" data-action="start-assessment">Start Assessment</button>
+
+    <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="nav__mobile" id="navMobile">
+    <a href="#home" data-nav-link="home">Home</a>
+    <a href="#assessment" data-nav-link="assessment">Assessment</a>
+    <a href="#how-it-works" data-nav-link="how-it-works">How It Works</a>
+    <a href="#about" data-nav-link="about">About</a>
+    <button class="btn btn--primary" data-action="start-assessment">Start Assessment</button>
+  </div>
+</header>
+
+<main id="viewRoot">
+
+<!-- ============ VIEW: LANDING ============ -->
+<div class="view" id="view-landing" data-view="landing">
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <p class="eyebrow">Machine-learning wellbeing score</p>
+        <h1 class="hero__headline">Understand Your Mind.<br><span>Measure Your Wellbeing.</span></h1>
+        <p class="hero__sub">MindScore uses machine learning to transform everyday lifestyle and wellbeing indicators into an easy-to-understand mental health score.</p>
+        <div class="hero__actions">
+          <button class="btn btn--primary btn--lg" data-action="start-assessment">Take the Assessment</button>
+          <a href="#how-it-works" class="btn btn--ghost btn--lg" data-nav-link="how-it-works">How It Works</a>
+        </div>
+        <p class="hero__disclaimer">Educational project · not a medical diagnosis</p>
+      </div>
+
+      <div class="hero__visual" aria-hidden="true">
+        <svg viewBox="0 0 480 480" class="node-graph" id="nodeGraph">
+          <g class="node-graph__lines">
+            <line x1="240" y1="240" x2="240" y2="70"></line>
+            <line x1="240" y1="240" x2="400" y2="150"></line>
+            <line x1="240" y1="240" x2="400" y2="330"></line>
+            <line x1="240" y1="240" x2="240" y2="410"></line>
+            <line x1="240" y1="240" x2="80" y2="330"></line>
+            <line x1="240" y1="240" x2="80" y2="150"></line>
+          </g>
+          <g class="node-graph__satellites">
+            <g class="satellite" style="--d:0"><circle cx="240" cy="70" r="26"/><text x="240" y="75">Sleep</text></g>
+            <g class="satellite" style="--d:1"><circle cx="400" cy="150" r="26"/><text x="400" y="155">Study</text></g>
+            <g class="satellite" style="--d:2"><circle cx="400" cy="330" r="26"/><text x="400" y="335">Social</text></g>
+            <g class="satellite" style="--d:3"><circle cx="240" cy="410" r="26"/><text x="240" y="415">Stress</text></g>
+            <g class="satellite" style="--d:4"><circle cx="80" cy="330" r="26"/><text x="80" y="335">Activity</text></g>
+            <g class="satellite" style="--d:5"><circle cx="80" cy="150" r="26"/><text x="80" y="155">Mood</text></g>
+          </g>
+          <g class="node-graph__core">
+            <circle cx="240" cy="240" r="58" class="core-glow"></circle>
+            <circle cx="240" cy="240" r="46" class="core-ring"></circle>
+            <text x="240" y="236" class="core-label">Mind</text>
+            <text x="240" y="256" class="core-label">Score</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section how-it-works" id="how-it-works">
+    <div class="section__inner">
+      <p class="eyebrow eyebrow--center">The pipeline</p>
+      <h2 class="section__title">From your answers to a score</h2>
+      <p class="section__sub">A straight line from what you enter to what the model returns — nothing hidden in between.</p>
+
+      <div class="pipeline">
+        <div class="pipeline__step">
+          <span class="pipeline__index">01</span>
+          <h3>You Answer</h3>
+          <p>Provide information about your lifestyle, academic life, digital habits, and wellbeing.</p>
+        </div>
+        <div class="pipeline__arrow" aria-hidden="true">→</div>
+        <div class="pipeline__step">
+          <span class="pipeline__index">02</span>
+          <h3>Data Processing</h3>
+          <p>Your responses are passed to the backend and processed by the trained ML pipeline.</p>
+        </div>
+        <div class="pipeline__arrow" aria-hidden="true">→</div>
+        <div class="pipeline__step">
+          <span class="pipeline__index">03</span>
+          <h3>Machine Learning</h3>
+          <p>A trained Random Forest regression model generates a predicted MindScore.</p>
+        </div>
+        <div class="pipeline__arrow" aria-hidden="true">→</div>
+        <div class="pipeline__step">
+          <span class="pipeline__index">04</span>
+          <h3>Your Result</h3>
+          <p>The prediction is presented through an easy-to-understand visual score.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNOLOGY -->
+  <section class="section tech">
+    <div class="section__inner">
+      <p class="eyebrow eyebrow--center">Under the hood</p>
+      <h2 class="section__title">Built with</h2>
+      <div class="tech__grid">
+        <div class="tech__card"><span>Python</span></div>
+        <div class="tech__card"><span>Pandas</span></div>
+        <div class="tech__card"><span>Scikit-learn</span></div>
+        <div class="tech__card"><span>Random Forest</span></div>
+        <div class="tech__card"><span>FastAPI</span></div>
+        <div class="tech__card"><span>HTML</span></div>
+        <div class="tech__card"><span>CSS</span></div>
+        <div class="tech__card"><span>JavaScript</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="section__inner section__inner--narrow">
+      <p class="eyebrow eyebrow--center">About the project</p>
+      <h2 class="section__title">An academic project, built like a product</h2>
+      <p class="about__text">MindScore is an academic machine-learning project exploring how behavioral, lifestyle, academic, and stress-related indicators can be used to predict a numerical mental health score.</p>
+      <p class="about__text">The project demonstrates data preprocessing, feature engineering, machine learning, regression, API development, and frontend/backend integration.</p>
+      <div class="about__disclaimer">
+        <strong>Important:</strong> MindScore is an educational and informational project. It is not a medical diagnosis or a substitute for professional mental-health advice.
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span>MindScore — a final-year machine learning project.</span>
+      <span>Not a medical device. Not a diagnosis.</span>
+    </div>
+  </footer>
+</div>
+
+<!-- ============ VIEW: ASSESSMENT ============ -->
+<div class="view" id="view-assessment" data-view="assessment" hidden>
+  <section class="assessment" id="assessment">
+    <div class="assessment__inner">
+
+      <div class="assessment__progress">
+        <div class="assessment__progress-top">
+          <span id="stepLabel">STEP 1 OF 5</span>
+          <span id="stepPercent">20%</span>
+        </div>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        <div class="progress-dots" id="progressDots"></div>
+      </div>
+
+      <form id="assessmentForm" novalidate>
+
+        <!-- STEP 1 -->
+        <fieldset class="step" data-step="1">
+          <legend class="step__title">About You</legend>
+          <p class="step__sub">A little context so we can personalize the model input.</p>
+
+          <div class="field">
+            <label for="f-age">Age</label>
+            <input type="number" id="f-age" name="age" min="10" max="100" step="1" required inputmode="numeric" />
+            <p class="field__hint">Between 10 and 100.</p>
+            <p class="field__error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <span class="field__label-text">Gender</span>
+            <div class="choice-row" role="radiogroup" aria-label="Gender" data-field="gender">
+              <button type="button" class="choice-pill" data-value="Male">Male</button>
+              <button type="button" class="choice-pill" data-value="Female">Female</button>
+            </div>
+            <p class="field__error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="f-country">Country</label>
+            <div class="country-select" id="countrySelect">
+              <button type="button" class="country-select__trigger" id="countryTrigger" aria-haspopup="listbox" aria-expanded="false">
+                <span id="countryTriggerLabel">Select your country</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" fill="none" stroke-width="2"/></svg>
+              </button>
+              <div class="country-select__panel" id="countryPanel" hidden>
+                <input type="text" id="countrySearch" placeholder="Search country…" autocomplete="off" />
+                <ul class="country-select__list" id="countryList" role="listbox" aria-label="Country"></ul>
+              </div>
+              <input type="hidden" id="f-country" name="country" required />
+            </div>
+            <p class="field__error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <span class="field__label-text">Academic Level</span>
+            <div class="choice-row" role="radiogroup" aria-label="Academic level" data-field="academicLevel">
+              <button type="button" class="choice-pill" data-value="High School">High School</button>
+              <button type="button" class="choice-pill" data-value="Undergraduate">Undergraduate</button>
+              <button type="button" class="choice-pill" data-value="Graduate">Graduate</button>
+            </div>
+            <p class="field__error" role="alert"></p>
+          </div>
+        </fieldset>
+
+        <!-- STEP 2 -->
+        <fieldset class="step" data-step="2" hidden>
+          <legend class="step__title">Digital Habits</legend>
+          <p class="step__sub">How social media fits into your day.</p>
+
+          <div class="field">
+            <label for="f-platform">Most Used Platform</label>
+            <select id="f-platform" name="platform" required>
+              <option value="" disabled selected>Choose a platform</option>
+              <option>Facebook</option><option>LinkedIn</option><option>Instagram</option>
+              <option>Snapchat</option><option>Twitter</option><option>YouTube</option>
+              <option>TikTok</option><option>LINE</option><option>KakaoTalk</option>
+              <option>VKontakte</option><option>WhatsApp</option><option>WeChat</option>
+            </select>
+            <p class="field__error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <span class="field__label-text">Purpose Of Use</span>
+            <div class="choice-row" role="radiogroup" aria-label="Purpose of use" data-field="purpose">
+              <button type="button" class="choice-pill" data-value="Networking">Networking</button>
+              <button type="button" class="choice-pill" data-value="Education">Education</button>
+              <button type="button" class="choice-pill" data-value="Entertainment">Entertainment</button>
+              <button type="button" class="choice-pill" data-value="News">News</button>
+            </div>
+            <p class="field__error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="f-usage">Average Daily Usage Hours</label>
+            <p class="field__hint">How much time do you typically spend on social media?</p>
+            <div class="slider" data-slider="dailyUsageHours">
+              <output>0.0 hrs</output>
+              <input type="range" id="f-usage" name="dailyUsageHours" min="0" max="24" step="0.1" value="0" />
+              <div class="slider__scale"><span>0</span><span>24</span></div>
+            </div>
+            <p class="field__error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="f-unlocks">Daily Unlocks</label>
+            <p class="field__hint">Roughly how many times a day do you unlock your phone?</p>
+            <input type="number" id="f-unlocks" name="dailyUnlocks" min="0" step="1" required inputmode="numeric" />
+            <p class="field__error" role="alert"></p>
+          </div>
+        </fieldset>
+
+        <!-- STEP 3 -->
+        <fieldset class="step" data-step="3" hidden>
+          <legend class="step__title">Lifestyle</legend>
+          <p class="step__sub">Study, movement, and rest.</p>
+
+          <div class="field">
+            <label for="f-study">Study Hours</label>
+            <div class="slider" data-slider="studyHours">
+              <output>0.0 hrs</output>
+              <input type="range" id="f-study" name="studyHours" min="0" max="24" step="0.1" value="0" />
+              <div class="slider__scale"><span>0</span><span>24</span></div>
+            </div>
+            <p class="field__error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="f-activity">Physical Activity Hours</label>
+            <div class="slider" data-slider="activityHours">
+              <output>0.0 hrs</output>
+              <input type="range" id="f-activity" name="activityHours" min="0" max="24" step="0.1" value="0" />
+              <div class="slider__scale"><span>0</span><span>24</span></div>
+            </div>
+            <p class="field__error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="f-sleep">Sleep Hours Per Night</label>
+            <div class="slider" data-slider="sleepHours">
+              <output>0.0 hrs</output>
+              <input type="range" id="f-sleep" name="sleepHours" min="0" max="24" step="0.1" value="0" />
+              <div class="slider__scale"><span>0</span><span>24</span></div>
+            </div>
+            <p class="field__error" role="alert"></p>
+          </div>
+        </fieldset>
+
+        <!-- STEP 4 -->
+        <fieldset class="step" data-step="4" hidden>
+          <legend class="step__title">Wellbeing</legend>
+          <p class="step__sub">How would you describe your stress level lately?</p>
+
+          <div class="field">
+            <div class="stress-cards" role="radiogroup" aria-label="Stress level" data-field="stressLevel">
+              <button type="button" class="stress-card" data-value="Low">
+                <span class="stress-card__dot"></span><span class="stress-card__label">Low</span>
+                <span class="stress-card__desc">Feeling steady and in control</span>
+              </button>
+              <button type="button" class="stress-card" data-value="Medium">
+                <span class="stress-card__dot"></span><span class="stress-card__label">Medium</span>
+                <span class="stress-card__desc">Manageable, with some pressure</span>
+              </button>
+              <button type="button" class="stress-card" data-value="High">
+                <span class="stress-card__dot"></span><span class="stress-card__label">High</span>
+                <span class="stress-card__desc">Frequently under pressure</span>
+              </button>
+              <button type="button" class="stress-card" data-value="Very High">
+                <span class="stress-card__dot"></span><span class="stress-card__label">Very High</span>
+                <span class="stress-card__desc">Overwhelmed most days</span>
+              </button>
+            </div>
+            <p class="field__error" role="alert"></p>
+          </div>
+        </fieldset>
+
+        <!-- STEP 5: REVIEW -->
+        <fieldset class="step" data-step="5" hidden>
+          <legend class="step__title">Review Your Answers</legend>
+          <p class="step__sub">Make sure everything looks right before we calculate your MindScore.</p>
+
+          <div class="review" id="reviewContent"></div>
+        </fieldset>
+
+        <div class="assessment__nav">
+          <button type="button" class="btn btn--ghost" id="btnBack">Back</button>
+          <button type="button" class="btn btn--primary" id="btnContinue">Continue</button>
+          <button type="submit" class="btn btn--primary btn--lg" id="btnSubmit" hidden>Calculate My MindScore</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
+
+<!-- ============ VIEW: LOADING ============ -->
+<div class="view" id="view-loading" data-view="loading" hidden>
+  <section class="loading-screen">
+    <svg viewBox="0 0 200 200" class="loading-ring">
+      <circle cx="100" cy="100" r="80" class="loading-ring__track"></circle>
+      <circle cx="100" cy="100" r="80" class="loading-ring__sweep"></circle>
+      <circle cx="100" cy="100" r="6" class="loading-ring__pulse"></circle>
+    </svg>
+    <h2>Analyzing your responses</h2>
+    <p id="loadingMessage">Preparing your MindScore…</p>
+  </section>
+</div>
+
+<!-- ============ VIEW: RESULTS ============ -->
+<div class="view" id="view-results" data-view="results" hidden>
+  <section class="results">
+    <div class="results__inner">
+
+      <div class="results__demo-banner" id="demoBanner" hidden>Demo mode — this score is a mock value, not a real prediction.</div>
+
+      <p class="eyebrow eyebrow--center">Your result</p>
+      <h2 class="section__title results__title">Your MindScore</h2>
+
+      <div class="score-gauge">
+        <svg viewBox="0 0 240 240" class="score-gauge__svg">
+          <defs>
+            <linearGradient id="gaugeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#4F46E5"/>
+              <stop offset="100%" stop-color="#8B5CF6"/>
+            </linearGradient>
+          </defs>
+          <circle cx="120" cy="120" r="104" class="score-gauge__track"></circle>
+          <circle cx="120" cy="120" r="104" class="score-gauge__fill" id="gaugeFill"></circle>
+        </svg>
+        <div class="score-gauge__center">
+          <span class="score-gauge__value" id="scoreValue">0.0</span>
+          <span class="score-gauge__range" id="scoreRange">of 3.6–9.4</span>
+        </div>
+      </div>
+
+      <p class="results__lede">Your estimated wellbeing score, generated from the information you provided.</p>
+
+      <div class="interpretation" id="interpretationCard">
+        <h3 id="interpretationLabel">—</h3>
+        <p id="interpretationDesc">—</p>
+      </div>
+
+      <div class="results__inputs">
+        <h3>Your Inputs</h3>
+        <div class="review" id="resultsInputSummary"></div>
+      </div>
+
+      <div class="results__actions">
+        <button class="btn btn--ghost" id="btnRetake">Retake Assessment</button>
+        <button class="btn btn--ghost" id="btnStartOver">Start Over</button>
+        <button class="btn btn--secondary" id="btnDownload">Download Report</button>
+        <button class="btn btn--secondary" id="btnPrint">Print Results</button>
+      </div>
+
+      <div class="results__disclaimer">
+        Your MindScore is an ML-generated wellbeing score based on the information you provided. MindScore is an educational and informational project. It is not a medical diagnosis or a substitute for professional mental-health advice.
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- API error toast -->
+<div class="toast" id="errorToast" role="alert" hidden>
+  <span id="errorToastText"></span>
+  <button type="button" aria-label="Dismiss" id="errorToastClose">×</button>
+</div>
+
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/assessment.js"></script>
+<script src="js/results.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
